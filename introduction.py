@@ -1,6 +1,6 @@
 print("Hello World")
 name='John'
-print(name)
+print("Hello " + name)
 print(1+6)
 print(5*5)
 print(7/2, 7//2) # div float div int
