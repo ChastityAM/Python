@@ -33,20 +33,20 @@ print("------------------------")
 for i in range(10):#prints 1 through 9
     print(i)
 print("------------------------")
+#what will x print 
 x=0
 while(x<100):
     x+=2
     print(x)
 print("------------------------")
 
-#list_of_numbers = [1, 2, 3, 4, 6, 8, 11, 18, 20]
-n = int(input("Please enter a number: "))
-while True:
-    if n % 2 != 0:
-        print("Weird")
-    elif n >= 2 and n <= 5 and n % 2 == 0:
-        print("Not Weird")
-    elif n >= 6 and n <= 20 and n % 2 == 0:
-        print("Weird")
-    break
-   
+#MAKE FOR AND WHILE LOOP IN RANGE TO PRINT 1-7
+for i in range(1, 8):
+    print(i)
+print()
+
+j = 1
+while j <= 7:
+    print(j)
+    j += 1
+

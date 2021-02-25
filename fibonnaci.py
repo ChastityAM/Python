@@ -1,16 +1,14 @@
 # Program to display the Fibonacci sequence up to 1000
+def fib(n):
+	N1=0
+	N2=1
+	previous_fib = N1
+	current_fib = N2
 
+	while current_fib < 1000:
+		print(current_fib)
+		temp = current_fib
+		current_fib = current_fib + previous_fib
+		previous_fib = temp
+fib(1000)
 
-from functools import lru_cache 
- 
-@lru_cache(maxsize = 1000) 
-def fibonacci(n): 
-	if n==1: 
-		return 1 
-	if n==2: 
-		return 1 
-	elif n>2: 
-		return fibonacci(n-1) + fibonacci(n-2) 
- 
-for i in range(1,1001): 
-	print(i,':',fibonacci(i))
