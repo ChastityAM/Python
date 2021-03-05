@@ -1,11 +1,5 @@
-print(5 < 10)
-print(5 < 5)
-print(5 == 5)
-print(5 != 5)
-print(5 <= 5)
-
-#if kwame_pts > kelby_pts:
- #   print("Kwami wins!")
+print((3>5) or (10 < 20)) #True
+print((3 == 3) and (3 < 4)) #True
 print(True and True)  #True
 print(True and False) #False
 print(True or False)  #True
