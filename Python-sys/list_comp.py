@@ -11,10 +11,16 @@ print("--------------------------")
 
 print("--------------------------")
 #squaring function
+x = 4
 def square(x):
     return x**2
 print("--------------------------")
 #lambda function to do same squaring
-print(list(map(lambda x: x**2, 1)))
+#print(list(map(lambda x: x**2, 1)))
 
+fruits = ["apple", "grape", "banana", "starfruit", "kiwi", "dragonfruit", "pineapple"]
+long_fruits = [fruit for fruit in fruits if len(fruit) > 6]
+long_fruits = [fruit.capitalize() for fruit in fruits if len(fruit) > 6]
+long_fruits = [f"A delicios {fruit}" for fruit in fruits if len(fruit) > 6]
 
+print(long_fruits)

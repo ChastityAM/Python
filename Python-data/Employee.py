@@ -1,15 +1,39 @@
-employee_name = input("Enter first and last name. \n").split(" ")
-first_name = employee_name[0].capitalize()
-last_name = employee_name[1].capitalize()
-employee_age = input("Please enter your age. \n")
-age = int(employee_age)
-employee_email = f'{first_name.lower()} . {last_name.lower()} {"@company.com"}'
 employees = {}
 while True:
+    try:
+        add_employees = int(input("How many employees would you like to enter? \n"))
+        entries = add_employees
+        if (add_employees < 1): 
+            raise Exception
+    except ValueError:
+        print("Please enter a number of entries.")
+    else:
+        print("Let's get started then")
+        break
+i = 0
+while i < entries:
     employee = {
-        "name": "",
-        "age" : 0,
-        "email" : ""
+        "Name ": "",
+        "Age " : 0,
+        "Email " : ""
     }
+    
+    name = input("Enter first and last name. \n").split(" ")
+    employee["name"] = name
+
+    while True:
+        try:
+            age = int(input("Please enter employee age. \n"))
+            if age <= 15:
+                print("Employee must be at least 15!")
+                continue
+        except ValueError:
+            print("Please enter a number.\n")
+        else:
+            employee["age"] = age
+            break
+    employee["email"] = name.replace(" ",".".lower) + "@company.com"    
     employees.append(employee)
+    i += 1
+
 print(employees)
