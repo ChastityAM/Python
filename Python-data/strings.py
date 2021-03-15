@@ -33,3 +33,7 @@ d = "I ate"
 message2 = "pizzas and nearly died!"
 r = f"{d} {c} {message2}, {6 * 9}"
 print(r)
+
+formatted_string = f"the number is {42 + 2}"
+raw_string = r"Hello world (allows / )"
+print(raw_string)
