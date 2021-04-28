@@ -1,4 +1,4 @@
-employees = {}
+employees = []
 while True:
     try:
         add_employees = int(input("How many employees would you like to enter? \n"))
@@ -13,26 +13,26 @@ while True:
 i = 0
 while i < entries:
     employee = {
-        "Name ": "",
-        "Age " : 0,
-        "Email " : ""
+        "name ": "",
+        "age " : 0,
+        "email " : ""
     }
     
-    name = input("Enter first and last name. \n").split(" ")
+    name = input("Enter first and last name. \n")#.split(" ")
     employee["name"] = name
 
     while True:
         try:
             age = int(input("Please enter employee age. \n"))
-            if age <= 15:
+            if age < 15:
                 print("Employee must be at least 15!")
                 continue
         except ValueError:
             print("Please enter a number.\n")
-        else:
-            employee["age"] = age
-            break
-    employee["email"] = name.replace(" ",".".lower) + "@company.com"    
+        else:0
+        employee["age"] = age
+        break
+    employee["email"] = name.replace(" ",".").lower() + "@company.com"    
     employees.append(employee)
     i += 1
 
