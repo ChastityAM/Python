@@ -10,3 +10,11 @@ print(apple_stocks[1])
 
 print("lowest value: ")
 print(apple_stocks[2])
+
+apple_stock = 74
+item = "apple watches"
+orders = 18
+
+print(f"{apple_stock} {item} in stock")
+print(f"{orders} customer orders")
+print(f"{apple_stock -orders} available")
